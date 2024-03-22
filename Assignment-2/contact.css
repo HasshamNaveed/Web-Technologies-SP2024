@@ -1,0 +1,68 @@
+body,html{
+    height: 100%;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("img/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container h1{
+    text-align: center;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+.name{
+    margin-bottom: 30px;
+}
+.form label,[aria-placeholder="text"] {
+    color: white;
+}
+::placeholder{
+    color:#ff5722;
+    opacity: 0.8;
+}
+.c{
+    display: flex;
+}
+.country{
+    width: 15%;
+}
+select{
+    width:50%;
+}
+.et{
+    margin-left: 30px;
+}
+.c{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.comment,.cbox{
+    display: block;
+}
+.form input,select{
+    background: grey;
+    opacity: 0.8;
+    border: 1px solid #2f2f2f;
+    border-radius: 50px;
+}
+.form input:focus{
+    outline-color:#ff5722;
+}
+.cbox{
+    background: grey;
+    border-radius: 5px;
+    opacity: 0.8;
+    width:100%;
+}
+[type=submit]{
+    margin-top: 30px;
+    float: right;
+}
