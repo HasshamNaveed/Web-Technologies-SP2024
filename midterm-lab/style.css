@@ -1,0 +1,91 @@
+html,body{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.navbar{
+    display:flex;
+    background: black;
+    align-items:stretch;
+}
+.menu{
+   background: darkgrey;
+    width:4%;
+}
+.image{
+    margin-left:0;
+    float:left;
+    gap:0;
+}
+.image img{
+    margin-left:0;
+    width:200px;
+    height:50px;
+    margin-right:550px;
+}
+.text{
+    display: flex;
+    color:white;
+    margin:0;
+    padding:0;
+    font-size: larger;
+}
+    
+.sd button{
+    padding:5px;
+    background: deepskyblue;
+}
+.text p,.text input{
+    margin-left:10px;
+}
+.searchd{
+    background: darkgrey;
+}
+.news{
+    display: flex;
+    justify-content: space-around;
+    margin:50px 100px;
+}
+.news img{
+    width:100%;
+    border: 1px solid black;
+}
+.inner{
+    border:2px solid black;
+    width:25%;
+}
+.sale{
+    color:white;
+    background: black;
+    display:flex;
+}
+.sale1,.sale2{
+    width:40%;
+}
+.sale1{
+    margin-left:100px;
+}
+.sale2{
+    align-items: center;
+}
+.sale2 button{
+    margin-top:20px;
+    padding:15px;
+    float:right;
+    background:deepskyblue;
+}
+.article{
+    display: flex;
+    width:100%;
+}
+.article1{
+    width:50%;
+}
+.article2{
+    width:50%;
+}
+.article2 img{
+    max-width:100%;
+    height: 90%;
+}
