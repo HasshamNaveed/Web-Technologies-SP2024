@@ -1,0 +1,45 @@
+html,body{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(bg1920.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    margin:0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    color:white;
+    font-family: sans-serif;
+    align-items: center;
+}
+.navbar img{
+    width:6%;
+}
+.navbar section{
+    display: flex;
+    margin-left:20%;
+}
+.navbar h3:hover{
+    color: greenyellow;
+}
+.margin{
+    margin-right:10%;
+}
+hr{
+    margin-top:-1%;
+}
+.heading {
+    height:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+}
+h1:hover{
+    color: greenyellow;
+}
