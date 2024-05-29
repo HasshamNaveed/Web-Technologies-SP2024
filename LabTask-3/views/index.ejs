@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img class="logo" src="/images/logo.png" alt="Image">
+        <div class="nchild">
+            <p class="adminLogin" id="adminLogin"> Admin Login</p>
+            <p class="register" id="adminRegister">Admin Register</p>
+            <p class="register" id="login">Login</p>
+            <p class="register" id="register">Register</p>
+            <script>
+                document.getElementById('login').addEventListener('click', function() {
+                    window.location.href = '/users/login';
+                });
+                document.getElementById('adminLogin').addEventListener('click', function() {
+                    window.location.href = '/admins/login';
+                });
+                document.getElementById('register').addEventListener('click', function() {
+                    window.location.href = '/users/register';
+                });
+                document.getElementById('adminRegister').addEventListener('click', function() {
+                    window.location.href = '/admins/register'});
+            </script>
+        </div>
+    </div>
+    <div class="b">
+        <h1>Book and Fly</h1>
+    </div>
+    <div class="c1">
+        <div class="c1l">
+            <h1>Focus on the journey not the destination</h1>
+        </div>
+        <div class="c1r">
+            <img src="/images/logo.png" alt="">
+        </div>
+    </div>
+    <div class="c2">
+        <div style="margin-left: 6%" class="img1">
+            <img src="/images/i1.jpeg" alt="Great service">
+            <p>Great service</p>
+        </div>
+        <div class="img1">
+            <img src="/images/i2.avif" alt="Nice flight">
+            <p>Nice flight</p>
+        </div>
+        <div class="img1">
+            <img src="/images/i3.avif" alt="Great experience">
+            <p>Great experience</p>
+        </div>
+    </div>
+    <div class="bar">
+        <div class="barl">
+            <h2>Get 30% discount on bookings</h2>
+            <p>Book your tickets before 31st March and avail 30% flat discount.</p>
+        </div>
+        <div class="barr">
+            <p>Book Now</p>
+        </div>
+    </div>
+    <div class="footer" id="about">
+        <p>Flight Booking System</p>
+    </div>
+</body>
+</html>
