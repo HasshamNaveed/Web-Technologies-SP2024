@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Add Flight</title>
+</head>
+<body>
+    <div class="nav">
+        <img class="logo" src="../images/logo.png">
+        <div class="nchild">
+            <form id="flightForm" action="/admins/flights" method="GET">
+                <button type="submit" class="adminLogin">View Flights</button>
+            </form>
+            <form id="logoutForm" action="/admins/logout" method="POST">
+                <button type="submit" class="register">Logout</button>
+            </form>
+        </div>
+    </div>
+    <form id="flightForm" action="/admins/flights" method="POST" onsubmit="convertTimeTo24HourFormat()">
+        <div class="c">
+            <label>Flight Name</label>
+            <input name="f_name" type="text" placeholder="Enter flight name" required><br>
+
+            <label>Date</label>
+            <input name="date" type="date" required><br>
+
+            <label>Time</label>
+            <input id="timeInput" name="at" type="time" required><br>
+
+            <label>Arrival</label>
+            <input name="destination" type="text" placeholder="Enter destination" required><br>
+
+            <label>Departure</label>
+            <input name="source" type="text" placeholder="Enter source" required><br>
+
+            <label>Duration</label>
+            <input id="durationInput" name="duration" type="text" placeholder="Enter duration (e.g., 02:30)" required><br>
+
+            <label>Total Seats (Greater than 100)</label>
+            <input name="total_seats" type="number" min="101" placeholder="Enter total seats" required><br>
+
+            <label>Business Fare</label>
+            <input name="businessFare" type="number" step="0.01" placeholder="Enter business fare"><br>
+
+            <label>Economy Fare</label>
+            <input name="economyFare" type="number" step="0.01" placeholder="Enter economy fare"><br>
+
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script>
+        function convertTimeTo24HourFormat() {
+            const timeInput = document.getElementById('timeInput');
+            const durationInput = document.getElementById('durationInput');
+
+            const time = timeInput.value;
+            const duration = durationInput.value;
+
+            timeInput.value = convertTo24Hour(time);
+            durationInput.value = formatDuration(duration);
+        }
+
+        function convertTo24Hour(timeStr) {
+            const [hours, minutes] = timeStr.split(':');
+            return `${padZero(hours)}:${padZero(minutes)}`;
+        }
+
+        function formatDuration(durationStr) {
+            const [hours, minutes] = durationStr.split(':');
+            return `${padZero(hours)}:${padZero(minutes)}`;
+        }
+
+        function padZero(value) {
+            return value.padStart(2, '0');
+        }
+    </script>
+</body>
+</html>

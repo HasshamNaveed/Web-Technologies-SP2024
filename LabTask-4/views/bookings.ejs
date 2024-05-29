@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <img class="logo" src="../images/logo.png">
+        <div class="nchild">
+            <form id="flightForm" action="/users/flights" method="GET">
+                <button type="submit" class="adminLogin">View Flights</button>
+            </form>
+            <form id="bookingForm" action="/users/book" method="GET">
+                <button type="submit" class="register">Book Flights</button>
+            </form>
+            <form id="logoutForm" action="/users/logout" method="POST">
+                <button type="submit" class="register">Logout</button>
+            </form>
+        </div>
+    </div>
+    <div class="c">
+        <h1>Booking Information</h1>
+        <% if (!bookings || bookings.length === 0) { %>
+            <p>No bookings available.</p>
+        <% } else { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking Number</th>
+                        <th>Airline</th>
+                        <th>Name</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                        <th>Class</th>
+                        <th>Seat Number</th>
+                        <th>Fare</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% bookings.forEach(booking => { %>
+                        <tr>
+                            <td><%= booking.b_id %></td>
+                            <td><%= booking.f_name %></td>
+                            <td><%= booking.name %></td>
+                            <td><%= booking.source %></td>
+                            <td><%= booking.destination %></td>
+                            <td><%= booking.date %></td>
+                            <td><%= booking.at %></td>
+                            <td><%= booking.duration %></td>
+                            <td><%= booking.bookingClass %></td>
+                            <td><%= booking.seat_no %></td>
+                            <td><%= booking.fare %></td>
+                            <td>
+                                <form action="/users/bookings/<%= booking.b_id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="delete-button">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <% if (currentPage > 1) { %>
+                    <a href="/users/bookings?page=<%= currentPage - 1 %>">&laquo; Previous</a>
+                <% } %>
+
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                    <a href="/users/bookings?page=<%= i %>" class="<%= currentPage === i ? 'active' : '' %>"><%= i %></a>
+                <% } %>
+
+                <% if (currentPage < totalPages) { %>
+                    <a href="/users/bookings?page=<%= currentPage + 1 %>">Next &raquo;</a>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
