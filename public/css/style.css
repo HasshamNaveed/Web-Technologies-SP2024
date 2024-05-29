@@ -1,0 +1,210 @@
+body{
+    background-image: linear-gradient(rgba(240,240,240,0.1),rgba(240,240,240,0.1)),url(../images/bg.jpg);
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100%;
+    font-family: sans-serif;
+    color: white;
+}
+.navbar{
+    position: fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 60px;
+    background-color: rgba(0,0,0,0.15);
+}
+.logo{
+    width: auto;
+    height: 60px;
+    margin: 0 3%;
+}
+.m{
+    font-size: large;
+    margin:0 20px;
+}
+.m:hover{
+    color: red;
+}
+.nchild{
+    width:85%;
+    color: white;
+    font-size: large;
+    display: flex;
+    align-items: center;
+}
+.register{
+    margin: 0 20px 0 40px;
+}
+.adminLogin{
+    margin-left: auto;
+}
+.nchild p:hover{
+    color: red;
+}
+.b{
+    display: flex;
+    height: 90%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+.b h1{
+    margin: 300px 0;
+    font-size: 70px;
+}
+.c1{
+    background-color: rgba(0,0,0,0.3);
+    margin:0 15%;
+    width:auto;
+    height:50%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c1l{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    width:68%;
+    height: 80%;
+}
+.c1l h1{
+    font-size: xxx-large;
+    word-spacing: 13px;
+}
+.c1r{
+    display: flex;
+    align-items: center;
+    width:28%;
+    height: 40%;
+}
+.c1r img{
+    width: 150px;
+    height: 150px;
+
+}
+.c2{
+    display: flex;
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+}
+.img1{
+    padding: 3%;
+    width:30%;
+}
+.img1 p{
+    margin-left:23%;
+}
+.c2 img{
+    border-radius:60%;
+    width: 250px;
+    height: 250px;
+}
+.bar{
+    display: flex;
+    width:100%;
+    background: rgba(0,0,0,0.6);
+    margin-top: 130px;
+    justify-content: center;
+    align-items: center;
+    height:130px;
+}
+.barl{
+    width:50%;
+}
+.barl h2{
+    margin-left: 7%;
+}
+.barr p{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.barr p:hover{
+    color: greenyellow;
+    border-color: greenyellow;
+}
+.footer {
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    color: white;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 60px;
+    background-color: rgba(0,0,0,0.15);
+}
+.c{
+    height:700px;
+    background: rgba(0,0,0,0.6);
+}
+.c h1{
+    text-align: center;
+}
+th,td{
+    padding:13px
+}
+button{
+    float: right;
+    padding:6px;
+    background: none;
+    border:3px solid rgba(0,0,0,0.3);
+    color:white;
+    border-radius:20px;
+}
+button:hover{
+    border-color: red;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: 1px solid rgba(0,0,0,0.6);
+}
+.pagination a:hover{
+    border-color: red;
+}
+.pagination a:hover:not(.active) {
+    background-color: rgba(0,0,0,0.3);
+}
+label{
+    margin-left: 30px;
+}
+input,select{
+    margin: 15px 0 15px 15px;
+    background: rgba(255,255,255,0.3);
+    padding:10px;
+    width: 300px;
+    border:none;
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
