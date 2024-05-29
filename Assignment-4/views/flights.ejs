@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flights</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <img class="logo" src="../images/logo.png">
+        <div class="nchild">
+            <form id="bookingForm" action="/users/bookings" method="GET" style="display: inline;">
+                <button type="submit" class="adminLogin">View Bookings</button>
+            </form>
+            <form id="logoutForm" action="/users/logout" method="POST" style="display: inline;">
+                <button type="submit" class="register">Logout</button>
+            </form>
+        </div>
+    </div>
+    <div class="c">
+        <h1>Flight Information</h1>
+        <% if (!flights || flights.length === 0) { %>
+            <p>No flights available.</p>
+        <% } else { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight Number</th>
+                        <th>Airline</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                        <th>Business Fare</th>
+                        <th>Economy Fare</th>
+                        <th>Total Seats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% flights.forEach(flight => { %>
+                        <tr>
+                            <td><%= flight.f_id %></td>
+                            <td><%= flight.f_name %></td>
+                            <td><%= flight.source %></td>
+                            <td><%= flight.destination %></td>
+                            <td><%= flight.date %></td>
+                            <td><%= flight.at %></td>
+                            <td><%= flight.duration %></td>
+                            <td><%= flight.businessFare %></td>
+                            <td><%= flight.economyFare %></td>
+                            <td><%= flight.total_seats %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+            <div class="pagination">
+                <% if (currentPage > 1) { %>
+                    <a href="/users/flights?page=<%= currentPage - 1 %>">&laquo; Previous</a>
+                <% } %>
+
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                    <a href="/users/flights?page=<%= i %>" class="<%= currentPage === i ? 'active' : '' %>"><%= i %></a>
+                <% } %>
+
+                <% if (currentPage < totalPages) { %>
+                    <a href="/users/flights?page=<%= currentPage + 1 %>">Next &raquo;</a>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

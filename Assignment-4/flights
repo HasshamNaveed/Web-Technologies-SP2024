@@ -1,0 +1,42 @@
+[
+  {
+    "f_id": 1,
+    "f_name": "Flight 101",
+    "date": "2024-06-15T00:00:00.000Z",
+    "at": "08:30",
+    "duration": "06:30",
+    "source": "New York",
+    "destination": "Los Angeles",
+    "total_seats": 180
+  },
+  {
+    "f_id": 2,
+    "f_name": "Flight 102",
+    "date": "2024-06-16T00:00:00.000Z",
+    "at": "12:00",
+    "duration": "10:00",
+    "source": "Chicago",
+    "destination": "Miami",
+    "total_seats": 200
+  },
+  {
+    "f_id": 3,
+    "f_name": "Flight 103",
+    "date": "2024-06-17T00:00:00.000Z",
+    "at": "16:00:00",
+    "duration": "14:00:00",
+    "source": "San Francisco",
+    "destination": "Seattle",
+    "total_seats": 150
+  },
+  {
+    "f_id": 4,
+    "f_name": "Flight 104",
+    "date": "2024-06-18T00:00:00.000Z",
+    "at": "20:00:00",
+    "duration": "18:00:00",
+    "source": "Boston",
+    "destination": "Washington D.C.",
+    "total_seats": 220
+  }
+]

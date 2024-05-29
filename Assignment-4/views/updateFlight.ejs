@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Flight</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <img class="logo" src="../images/logo.png">
+        <div class="nchild">
+            <form id="flightForm" action="/admins/addFlight" method="GET" style="display: inline;">
+                <button class="adminLogin">Add Flight</button>
+            </form>
+            <form id="logoutForm" action="/admins/logout" method="POST" style="display: inline;">
+                <button type="submit" class="register">Logout</button>
+            </form>
+        </div>
+    </div>
+    <div class="c">
+        <h1>Update Flight Information</h1>
+        <form action="/admins/updateFlight/<%= flight.f_id %>" method="POST">
+            <label for="f_name">Airline:</label>
+            <input type="text" id="f_name" name="f_name" value="<%= flight.f_name %>" required><br>
+
+            <label for="source">Departure:</label>
+            <input type="text" id="source" name="source" value="<%= flight.source %>" required><br>
+
+            <label for="destination">Arrival:</label>
+            <input type="text" id="destination" name="destination" value="<%= flight.destination %>" required><br>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="<%= flight.date %>" required><br>
+
+            <label for="at">Time:</label>
+            <input type="time" id="at" name="at" value="<%= flight.at %>" required><br>
+
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration" value="<%= flight.duration %>" required><br>
+
+            <label for="businessFare">Business Fare:</label>
+            <input type="number" id="businessFare" name="businessFare" value="<%= flight.businessFare %>" required><br>
+
+            <label for="economyFare">Economy Fare:</label>
+            <input type="number" id="economyFare" name="economyFare" value="<%= flight.economyFare %>" required><br>
+
+            <label for="total_seats">Total Seats:</label>
+            <input type="number" id="total_seats" name="total_seats" value="<%= flight.total_seats %>" required><br>
+
+            <button type="submit" class="updateButton">Update Flight</button>
+        </form>
+    </div>
+</body>
+</html>
