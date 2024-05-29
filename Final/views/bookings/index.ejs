@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>My Bookings</h1>
+    <ul>
+        <% bookings.forEach(booking => { %>
+            <li>
+                <p>Name: <%= booking.name %></p>
+                <p>Age: <%= booking.age %></p>
+                <p>Phone: <%= booking.phone %></p>
+                <p>Gender: <%= booking.gender %></p>
+                <p>Seat Number: <%= booking.seat_no %></p>
+                <p>Class: <%= booking.class %></p>
+                <p>Flight ID: <%= booking.f_id._id %></p>
+                <p>Flight Name: <%= booking.f_id.name %></p>
+                <p>Flight Date: <%= booking.f_id.date %></p>
+                <form action="/users/bookings/<%= booking.b_id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete Booking</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
